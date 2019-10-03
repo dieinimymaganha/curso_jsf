@@ -7,23 +7,23 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:body>
     <h:outputLabel value="world"/><br/>
-    <h:outputLabel value="#{estudanteRegistrarBean.nome}"/><br/>
-    <h:outputLabel value="#{estudanteRegistrarBean['sobrenome']}"/><br/>
-    <h:outputLabel value="#{estudanteRegistrarBean.nota1 eq estudanteRegistrarBean.nota2}"/><br/>
-    <h:outputLabel value="#{estudanteRegistrarBean.nota1 == estudanteRegistrarBean.nota2}"/><br/>
-    <h:outputLabel value="#{estudanteRegistrarBean.nota1 eq estudanteRegistrarBean.nota2 and
-                            estudanteRegistrarBean.nome.equals(('William'))}"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarBean.estudante.nome}"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarBean.estudante['sobrenome']}"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 eq estudanteRegistrarBean.estudante.nota2}"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 == estudanteRegistrarBean.estudante.nota2}"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 eq estudanteRegistrarBean.estudante.nota2 and
+                            estudanteRegistrarBean.estudante.nome.equals(('William'))}"/><br/>
     <!--   Menor igual-->
     <h:outputText value="Comparação notas"/><br/>
-    <h:outputLabel value="#{estudanteRegistrarBean.nota1 le estudanteRegistrarBean.nota2}"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 le estudanteRegistrarBean.estudante.nota2}"/><br/>
     <!--   Operação ternária-->
-    <h:outputLabel value="#{estudanteRegistrarBean.nota1 eq 0 ? 'Zero' : 'Não Zero'}"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 eq 0 ? 'Zero' : 'Não Zero'}"/><br/>
     <!--   operador de atribuição-->
-    <h:outputLabel value="#{estudanteRegistrarBean.nota1 = 40}"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 = 40}"/><br/>
     <!--   O Valor se mantem-->
-    <h:outputLabel value="#{estudanteRegistrarBean.nota1}"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1}"/><br/>
     <!--   Concatenação-->
-    <h:outputLabel value="#{estudanteRegistrarBean.nome += 'Algumacoisa'}"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarBean.estudante.nome += 'Algumacoisa'}"/><br/>
     <!--   Palavras reservadas: and, or, not, eq, ne, lt, qt, le, ge, true, false
            null, instanceof, empty, div e mod-->
 
