@@ -1,53 +1,20 @@
 package br.com.devdojo.maratonajsf.bean.estudante;
 
+import br.com.devdojo.maratonajsf.model.Estudante;
+
 import javax.inject.Named;
 import java.io.Serializable;
 
 @Named
 public class EstudanteRegistrarBean implements Serializable {
-    private String nome = "William";
-    private String sobrenome = "Suane";
-    private double nota1;
-    private double nota2;
-    private double nota3 = 10;
+    private Estudante estudante = new Estudante();
 
-    public String getNome() {
-        return nome;
+
+    public Estudante getEstudante() {
+        return estudante;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getSobrenome() {
-        return sobrenome;
-    }
-
-    public void setSobrenome(String sobrenome) {
-        this.sobrenome = sobrenome;
-    }
-
-    public double getNota1() {
-        return nota1;
-    }
-
-    public void setNota1(double nota1) {
-        this.nota1 = nota1;
-    }
-
-    public double getNota2() {
-        return nota2;
-    }
-
-    public void setNota2(double nota2) {
-        this.nota2 = nota2;
-    }
-
-    public double getNota3() {
-        return nota3;
-    }
-
-    public void setNota3(double nota3) {
-        this.nota3 = nota3;
+    public void setEstudante(Estudante estudante) {
+        this.estudante = estudante;
     }
 }
