@@ -1,4 +1,4 @@
-package bean.estudante;
+package br.com.devdojo.maratonajsf.bean.estudante;
 
 import javax.inject.Named;
 import java.io.Serializable;
