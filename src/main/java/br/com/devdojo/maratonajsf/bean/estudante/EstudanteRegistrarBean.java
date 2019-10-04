@@ -4,7 +4,9 @@ import br.com.devdojo.maratonajsf.model.Estudante;
 
 import javax.inject.Named;
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import static java.util.Arrays.asList;
 
@@ -15,6 +17,15 @@ public class EstudanteRegistrarBean implements Serializable {
 
     private String[] nomesArray = {"DevDojo", "eh", "foda"};
     private List<String> nomesList = asList("William", "Wildnei", "Brenon", "Sandy");
+    private Set<String> nomesSet = new HashSet<>(asList("Goku", "Luffy", "Naruto", "Kuririm"));
+
+    public Set<String> getNomesSet() {
+        return nomesSet;
+    }
+
+    public void setNomesSet(Set<String> nomesSet) {
+        this.nomesSet = nomesSet;
+    }
 
     public List<String> getNomesList() {
         return nomesList;

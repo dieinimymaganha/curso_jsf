@@ -52,5 +52,12 @@
         <h:outputLabel value="#{nome}"/><br/>
     </ui:repeat>
 
+    <h:outputLabel value="------SET------"/><br/>
+    <!--ui:repeat SET-->
+    <!--    Aqui funcionou normalmente o SET diferente do cógido do profetor-->
+    <ui:repeat value="#{estudanteRegistrarBean.nomesSet}" var="nome">
+        <h:outputLabel value="#{nome}"/><br/>
+    </ui:repeat>
+
 </h:body>
 </html>
