@@ -37,6 +37,20 @@
     <h:outputLabel value="#{estudanteRegistrarBean.estudante.turno}"/><br/>
     <h:outputLabel value="#{estudanteRegistrarBean.estudante.turno eq  Turno.MATUTINO}"/><br/>
 
+    <!--    Arrays-->
+    <h:outputLabel value="#{estudanteRegistrarBean.nomesArray[0]}
+     #{estudanteRegistrarBean.nomesArray[1]} #{estudanteRegistrarBean.nomesArray[2]}"/><br/>
+    <!--    ui: repeat array-->
+    <ui:repeat value="#{estudanteRegistrarBean.nomesArray}" var="nome">
+        <h:outputLabel value="#{nome}"/><br/>
+    </ui:repeat>
+    <!--    List-->
+    <h:outputLabel value="#{estudanteRegistrarBean.nomesList.get(0)}
+     #{estudanteRegistrarBean.nomesList.get(1)} #{estudanteRegistrarBean.nomesList.get(2)}"/><br/>
+    <!--    ui: repeat List-->
+    <ui:repeat value="#{estudanteRegistrarBean.nomesList}" var="nome">
+        <h:outputLabel value="#{nome}"/><br/>
+    </ui:repeat>
 
 </h:body>
 </html>
