@@ -58,6 +58,14 @@
     <ui:repeat value="#{estudanteRegistrarBean.nomesSet}" var="nome">
         <h:outputLabel value="#{nome}"/><br/>
     </ui:repeat>
+    <!--    MAP-->
+    <h:outputLabel value="------MAP------"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarBean.nomesMap.get('Goku')}"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarBean.nomesMap}"/><br/>
+
+    <ui:repeat value="#{estudanteRegistrarBean.nomesMap.entrySet().toArray()}" var="entry">
+        <h:outputLabel value="#{entry}"/><br/>
+    </ui:repeat>
 
 </h:body>
 </html>
