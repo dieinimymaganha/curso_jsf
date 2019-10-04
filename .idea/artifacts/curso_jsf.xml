@@ -2,15 +2,17 @@
   <artifact type="exploded-war" name="curso_jsf">
     <output-path>$PROJECT_DIR$/out/artifacts/curso_jsf.war</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="curso_jsf/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="curso_jsf" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: com.sun.faces:jsf-api:2.2.13" />
+          <element id="library" level="project" name="Maven: org.primefaces:primefaces:6.0" />
         </element>
       </element>
+      <element id="javaee-facet-resources" facet="curso_jsf/web/Web" />
+      <element id="javaee-facet-resources" facet="curso_jsf/web/Web2" />
     </root>
   </artifact>
 </component>
