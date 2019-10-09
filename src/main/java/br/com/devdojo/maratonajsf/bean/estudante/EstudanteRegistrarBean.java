@@ -24,6 +24,21 @@ public class EstudanteRegistrarBean implements Serializable {
         nomesMap.put("Naruto", "LengaLenga");
     }
 
+    public void executar(String param) {
+        System.out.println("Fazendo um busca no DB com o PARAMETRO: " + param);
+        System.out.println("Processamento os dados");
+        System.out.println("Exibindo os dados");
+    }
+
+    public String irparaIndex2() {
+//        Para redirecionar a url utiliza ?faces-redirect=true
+        return "index2?faces-redirect=true";
+
+    }
+
+    public String executarRetorno(String param) {
+        return "Quem é o lindão " + param;
+    }
 
     public Map<String, String> getNomesMap() {
         return nomesMap;
