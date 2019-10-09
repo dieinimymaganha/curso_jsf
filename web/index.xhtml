@@ -77,6 +77,8 @@
     <h:form>
         <h:commandButton value="Ir para proxima Pagina"
                          action="#{estudanteRegistrarBean.irparaIndex2()}"/><br/>
+
+        <h:commandButton value="Soltar Magina" onclick="fazMagica('Hadouken')"/>
     </h:form>
     <!--    Imprimendo CSS com EL-->
     <ui:repeat value="#{estudanteRegistrarBean.nomesList}" var="nome"
@@ -87,4 +89,14 @@
 
 
 </h:body>
+
+<script type="text/javascript">
+    function fazMagica(magica) {
+        alert(magica);
+
+    }
+
+
+</script>
+
 </html>
