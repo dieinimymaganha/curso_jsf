@@ -2,6 +2,7 @@ package br.com.devdojo.maratonajsf.bean.estudante;
 
 import br.com.devdojo.maratonajsf.model.Estudante;
 
+import javax.faces.view.ViewScoped;
 import javax.inject.Named;
 import java.io.Serializable;
 import java.util.*;
@@ -9,6 +10,7 @@ import java.util.*;
 import static java.util.Arrays.asList;
 
 @Named
+@ViewScoped
 public class EstudanteRegistrarBean implements Serializable {
     private Estudante estudante = new Estudante();
 
@@ -37,6 +39,16 @@ public class EstudanteRegistrarBean implements Serializable {
 
     }
 
+    public  String exibirNotas(){
+        this.mostrarNotas = true;
+        return "index";
+    }
+
+
+    public String esconderNotas(){
+        this.mostrarNotas = false;
+        return "index";
+    }
     public boolean isMostrarNotas() {
         return mostrarNotas;
     }
