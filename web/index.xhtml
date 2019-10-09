@@ -87,6 +87,17 @@
 
         <h:outputLabel value="#{nome}" style="color: #{status.index mod 2 == 0? 'red' : 'green'}"/><br/>
     </ui:repeat>
+    <br/>
+    <h:outputText value="#{estudanteRegistrarBean.estudante.nome}"/>
+    <h:outputText value="#{estudanteRegistrarBean.estudante.sobrenome}"/>
+    <h:outputText value="#{estudanteRegistrarBean.estudante.turno}"/>
+
+    <h:outputText value="#{estudanteRegistrarBean.estudante.nota1}"
+                  rendered="#{estudanteRegistrarBean  .mostrarNotas}"/>
+    <h:outputText value="#{estudanteRegistrarBean.estudante.nota2}"
+                  rendered="#{estudanteRegistrarBean  .mostrarNotas}"/>
+    <h:outputText value="#{estudanteRegistrarBean.estudante.nota3}"
+                  rendered="#{estudanteRegistrarBean  .mostrarNotas}"/>
 
 
 </h:body>
