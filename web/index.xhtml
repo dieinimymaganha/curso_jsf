@@ -66,6 +66,16 @@
     <ui:repeat value="#{estudanteRegistrarBean.nomesMap.entrySet().toArray()}" var="entry">
         <h:outputLabel value="#{entry}"/><br/>
     </ui:repeat>
+    <!--    NO meu se deixar sem as aspas da zica-->
+    #{estudanteRegistrarBean.executar('')}
+    #{estudanteRegistrarBean.executar('Xuxu beleza')}
+    #{estudanteRegistrarBean.executar(estudanteRegistrarBean.estudante.nome)}
+    #{estudanteRegistrarBean.executarRetorno(estudanteRegistrarBean.estudante.nome)}
+<!--    Chamando um metodo para gerar uma ação-->
 
+    <h:form>
+    <h:commandButton value="Ir para proxima Pagina"
+                     action="#{estudanteRegistrarBean.irparaIndex2()}"/>
+    </h:form>
 </h:body>
 </html>
