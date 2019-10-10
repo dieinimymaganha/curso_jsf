@@ -19,7 +19,9 @@ public class EstudanteRegistrarBean implements Serializable {
     private List<String> nomesList = asList("William", "Wildnei", "Brenon", "Sandy");
     private Set<String> nomesSet = new HashSet<>(asList("Goku", "Luffy", "Naruto", "Kuririm"));
     private Map<String, String> nomesMap = new HashMap<>();
-    private boolean mostrarNotas;
+    private boolean mostrarNotas = true;
+    private  boolean mostrarLink;
+    
 
     {
         nomesMap.put("Goku", "O mais forte");
@@ -34,7 +36,7 @@ public class EstudanteRegistrarBean implements Serializable {
     }
 
     public String irparaIndex2() {
-//        Para redirecionar a url utiliza ?faces-redirect=true
+        /* Para redirecionar a url utiliza ?faces-redirect=true */
         return "index2?faces-redirect=true";
 
     }
@@ -45,6 +47,21 @@ public class EstudanteRegistrarBean implements Serializable {
 
     public void esconderNotas() {
         this.mostrarNotas = false;
+    }
+    public void exibirLink() {
+        this.mostrarLink = true;
+    }
+
+    public void esconderLink() {
+        this.mostrarLink = false;
+    }
+
+    public boolean isMostrarLink() {
+        return mostrarLink;
+    }
+
+    public void setMostrarLink(boolean mostrarLink) {
+        this.mostrarLink = mostrarLink;
     }
 
     public boolean isMostrarNotas() {
