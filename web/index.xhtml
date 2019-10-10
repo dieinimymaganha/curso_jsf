@@ -137,7 +137,12 @@
     #{(cubo = (x -> x*x*x)); cubo(10)}<br/>
     #{cubo(20)}<br/>
 
-    
+    <h:form>
+
+    <h:commandButton value="Calcular Cubo" actionListener="#{estudanteRegistrarBean.calcularCubo((x -> x*x*x),10)}">
+
+    </h:commandButton>
+    </h:form>
 
 </h:body>
 
