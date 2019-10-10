@@ -167,7 +167,11 @@
     <ui:repeat value="#{numeroList.stream().filter(v -> v>5).toList()}" var="resul">
         #{resul}
     </ui:repeat>
-    
+    <br/>
+    #{numeroList.stream().average().get()}
+    #{numeroList.stream().sum()}<br/>
+    #{numeroList.stream().filter(v-> v>5).sum()}
+
 </h:body>
 
 <script type="text/javascript">
