@@ -96,7 +96,9 @@
         <h:commandButton value="Exibir notas">
             <f:ajax render ="notasGrid" listener="#{estudanteRegistrarBean.exibirNotas()}"/>
         </h:commandButton>
-
+        <h:commandButton value="Esconder notas">
+            <f:ajax render ="notasGrid" listener="#{estudanteRegistrarBean.esconderNotas()}"/>
+        </h:commandButton>
         <br/>
         <h:panelGrid id="notasGrid">
             <h:outputText value="#{estudanteRegistrarBean.estudante.nome}"/>
@@ -110,7 +112,22 @@
             <h:outputText value="#{estudanteRegistrarBean.estudante.nota3}"
                           rendered="#{estudanteRegistrarBean  .mostrarNotas}"/>
             <h:outputText value="#{estudanteRegistrarBean.mostrarNotas}"/>
-        </h:panelGrid>
+        </h:panelGrid><br/>
+
+        <h:commandButton value="Exibir Link">
+            <f:ajax render ="pgLink" listener="#{estudanteRegistrarBean.exibirLink()}"/>
+        </h:commandButton>
+
+        <h:commandButton value="Esconder Link">
+            <f:ajax render ="pgLink" listener="#{estudanteRegistrarBean.esconderLink()}"/>
+        </h:commandButton>
+        <h:panelGroup id="pgLink">
+
+
+        <ui:fragment rendered="#{estudanteRegistrarBean.mostrarLink}">
+        <a href="http://www.google.com.br" target="_blank">www.google.com.br</a>
+        </ui:fragment>
+        </h:panelGroup>
     </h:form>
 </h:body>
 
