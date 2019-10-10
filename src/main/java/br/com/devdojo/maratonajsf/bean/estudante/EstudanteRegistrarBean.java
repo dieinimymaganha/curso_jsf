@@ -39,16 +39,14 @@ public class EstudanteRegistrarBean implements Serializable {
 
     }
 
-    public  String exibirNotas(){
+    public void exibirNotas() {
         this.mostrarNotas = true;
-        return "index";
     }
 
-
-    public String esconderNotas(){
+    public void esconderNotas() {
         this.mostrarNotas = false;
-        return "index";
     }
+
     public boolean isMostrarNotas() {
         return mostrarNotas;
     }
