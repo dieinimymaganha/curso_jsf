@@ -129,6 +129,16 @@
         </ui:fragment>
         </h:panelGroup>
     </h:form>
+
+    <!--    Lambdas-->
+    #{(soma -> soma + num2) (10)}<br/>
+    #{((v1, v2, v3) ->  v1 * v2 * v3) (1,5,10) }<br/>
+    #{(x -> x*x*x) (2)}<br/>
+    #{(cubo = (x -> x*x*x)); cubo(10)}<br/>
+    #{cubo(20)}<br/>
+
+    
+
 </h:body>
 
 <script type="text/javascript">
