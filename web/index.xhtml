@@ -161,7 +161,11 @@
 <!--            #{entry.key} - #{entry.value}-->
 <!--        </ui:repeat>-->
 <!--    </ui:repeat>-->
-
+    <br/>
+    <ui:repeat value="#{[1,2,3,4,5,6,7,8,9,10].stream().filter(v -> v>5).toList()}" var="resul">
+        #{resul}
+    </ui:repeat>
+    
 </h:body>
 
 <script type="text/javascript">
