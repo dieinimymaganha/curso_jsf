@@ -2,6 +2,7 @@ package br.com.devdojo.maratonajsf.bean.session;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.SessionScoped;
+import javax.faces.context.FacesContext;
 import javax.inject.Named;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -27,8 +28,14 @@ public class TesteSessionBean implements Serializable {
         int index = ThreadLocalRandom.current().nextInt();
         String personagem = personagens.get(index);
         personagemSelecionado.add(personagem);
-
     }
+
+    public String logout(){
+        FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
+        return "session?faces-redirect=true";
+    }
+
+
 
     public List<String> getPersonagemSelecionado() {
         return personagemSelecionado;
