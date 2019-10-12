@@ -13,6 +13,11 @@
             <h:outputText value="#{testeRequestBean.personagemSelecionado}"/><br/>
             <h:commandButton actionListener="#{testeRequestBean.selecionarPersonagem()}"
                              value="Selecionar personagem"/>
+            <h:commandButton actionListener="#{testeRequestBean.selecionarPersonagem()}"
+                             value="Selecionar Personargem Forward" action="index2"/>
+
+            <h:commandButton actionListener="#{testeRequestBean.selecionarPersonagem()}"
+                             value="Selecionar Personargem Forward" action="index2?faces-redirect=true"/>
         </h:form>
 
     </h:body>
