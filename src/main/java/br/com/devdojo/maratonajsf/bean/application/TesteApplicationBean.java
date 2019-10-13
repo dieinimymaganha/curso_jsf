@@ -45,6 +45,7 @@ public class TesteApplicationBean implements Serializable {
 
     }
 
+
     public TesteDependenteBean getDependenteBean() {
         return dependenteBean;
     }
