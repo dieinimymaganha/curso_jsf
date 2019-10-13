@@ -11,6 +11,14 @@ public class TesteFlowBean implements Serializable {
     private String sobrenome;
     private String endereco;
 
+    public String salvar(){
+        System.out.println("Salvando no banco");
+        System.out.println(nome);
+        System.out.println(sobrenome);
+        System.out.println(endereco);
+        return "exitToInicio";
+
+    }
     public String getNome() {
         return nome;
     }
