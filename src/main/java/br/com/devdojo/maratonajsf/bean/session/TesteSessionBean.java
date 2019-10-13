@@ -3,6 +3,7 @@ package br.com.devdojo.maratonajsf.bean.session;
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.context.FacesContext;
+import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -16,6 +17,7 @@ import static java.util.Arrays.asList;
 public class TesteSessionBean implements Serializable {
     private List<String> personagens;
     private List<String> personagemSelecionado = new ArrayList<>();
+
 
     @PostConstruct
     public void init() {
