@@ -16,7 +16,11 @@ public class NewRegistrationFlowBuilder implements Serializable {
         flowBuilder.viewNode(flowId, "/newregistration/newregistration.xhtml").markAsStartNode();
         flowBuilder.viewNode(flowId, "/newregistration/newregistration2.xhtml");
         flowBuilder.viewNode(flowId, "/newregistration/newregistration3.xhtml");
-
+        flowBuilder.switchNode("newRegistrationPage2")
+                .defaultOutcome(flowId)
+                .switchCase()
+                .condition("#{not empty testeFlowBuilderBean.nome and not empty testeFlowBuilderBean.sobrenome}")
+                .fromOutcome("newregistration2");
         flowBuilder.returnNode("exitToInicio").fromOutcome("/inicioflow.xhtml");
         flowBuilder.returnNode("exitToIndex").fromOutcome("/index.xhtml");
         return flowBuilder.getFlow();
