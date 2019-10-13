@@ -36,10 +36,13 @@ public class TesteViewBean implements Serializable {
 
     public void selecionarPersonagem() {
 //        int index = ThreadLocalRandom.current().nextInt(bound: 3);
-        int index = ThreadLocalRandom.current().nextInt();
-        String personagem = personagens.get(index);
-        personagemSelecionado.add(personagem);
-        dependenteBean.getPersonagemSelecionado().add(personagem);
+        System.out.println(sessionBean.getEstudante().getNome());
+        if (sessionBean.getEstudante().getNome().equals("William")) {
+            int index = ThreadLocalRandom.current().nextInt(3);
+            String personagem = personagens.get(index);
+            personagemSelecionado.add(personagem);
+            dependenteBean.getPersonagemSelecionado().add(personagem);
+        }
     }
 
     public TesteSessionBean getSessionBean() {
