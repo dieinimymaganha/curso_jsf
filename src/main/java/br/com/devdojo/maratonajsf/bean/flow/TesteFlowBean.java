@@ -16,6 +16,7 @@ public class TesteFlowBean implements Serializable {
         System.out.println(nome);
         System.out.println(sobrenome);
         System.out.println(endereco);
+//        return "exitToIndex";
         return "exitToInicio";
 
     }
