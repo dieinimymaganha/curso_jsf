@@ -5,10 +5,12 @@
     http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
 
     <flow-definition id="registration">
+        <!--Usa esse cara quando vc quer uma pagina de entrada diferente da convencao-->
         <view id="registrationInicio">
             <start-node>registrationInicio</start-node>
             <vdl-document>/registration/registration1.xhtml</vdl-document>
         </view>
+        <!--Switch para validar se o usuário pode ir para proxima página-->
         <switch id="registrationPage2">
             <case>
                 <if>#{not empty testeFlowBean.nome and not empty testeFlowBean.sobrenome}</if>
@@ -16,12 +18,14 @@
             </case>
             <default-outcome>registrationInicio</default-outcome>
         </switch>
+        <!--Paginas de retorno-->
         <flow-return id="exitToInicio">
             <from-outcome>/inicioflow.hxtml</from-outcome>
         </flow-return>
         <flow-return id="exitToIndex">
             <from-outcome>/index.hxtml</from-outcome>
         </flow-return>
+        <!--Metodo que sera executado independente do flow-return-->
         <finalizer>#{testeFlowBean.salvar}</finalizer>
     </flow-definition>
 
