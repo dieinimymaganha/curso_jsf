@@ -45,10 +45,6 @@ public class TesteViewBean implements Serializable {
         }
     }
 
-    public TesteSessionBean getSessionBean() {
-        return sessionBean;
-    }
-
     public TesteDependenteBean getDependenteBean() {
         return dependenteBean;
     }
