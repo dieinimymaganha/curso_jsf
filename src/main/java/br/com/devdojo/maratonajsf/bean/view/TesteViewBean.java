@@ -1,6 +1,7 @@
 package br.com.devdojo.maratonajsf.bean.view;
 
 import br.com.devdojo.maratonajsf.bean.dependent.TesteDependenteBean;
+import br.com.devdojo.maratonajsf.bean.session.TesteSessionBean;
 
 import javax.annotation.PostConstruct;
 import javax.faces.view.ViewScoped;
@@ -19,10 +20,12 @@ public class TesteViewBean implements Serializable {
     private List<String> personagens;
     private List<String> personagemSelecionado = new ArrayList<>();
     private final TesteDependenteBean dependenteBean;
+    private final TesteSessionBean sessionBean;
 
     @Inject
-    public TesteViewBean(TesteDependenteBean dependenteBean) {
+    public TesteViewBean(TesteDependenteBean dependenteBean, TesteSessionBean sessionBean) {
         this.dependenteBean = dependenteBean;
+        this.sessionBean = sessionBean;
     }
 
     @PostConstruct
@@ -37,6 +40,10 @@ public class TesteViewBean implements Serializable {
         String personagem = personagens.get(index);
         personagemSelecionado.add(personagem);
         dependenteBean.getPersonagemSelecionado().add(personagem);
+    }
+
+    public TesteSessionBean getSessionBean() {
+        return sessionBean;
     }
 
     public TesteDependenteBean getDependenteBean() {
