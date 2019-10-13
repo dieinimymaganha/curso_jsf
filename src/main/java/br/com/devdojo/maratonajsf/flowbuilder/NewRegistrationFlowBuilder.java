@@ -27,6 +27,7 @@ public class NewRegistrationFlowBuilder implements Serializable {
                 .outboundParameter("userSurname", "#{testeFlowBuilderBean.sobrenome}");
         flowBuilder.returnNode("exitToInicio").fromOutcome("/inicioflow.xhtml");
         flowBuilder.returnNode("exitToIndex").fromOutcome("/index.xhtml");
+        flowBuilder.finalizer("#{testeFlowBuilderBean.salvar}");
         return flowBuilder.getFlow();
     }
 }
