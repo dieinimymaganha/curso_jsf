@@ -23,7 +23,7 @@ public class TesteFlowBuilderNestedBean implements Serializable {
             "Algum detalhe util"));
             return null;
         }
-        return "proceedToRegistration3";
+        return "proceedToNewRegistration3";
     }
 
     public String getUserName() {

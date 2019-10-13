@@ -21,6 +21,10 @@ public class NewRegistrationFlowBuilder implements Serializable {
                 .switchCase()
                 .condition("#{not empty testeFlowBuilderBean.nome and not empty testeFlowBuilderBean.sobrenome}")
                 .fromOutcome("newregistration2");
+        flowBuilder.flowCallNode("callNewPendencies")
+                .flowReference("","newpendencies")
+                .outboundParameter("userName", "#{testeFlowBuilderBean.nome}")
+                .outboundParameter("userSurname", "#{testeFlowBuilderBean.sobrenome}");
         flowBuilder.returnNode("exitToInicio").fromOutcome("/inicioflow.xhtml");
         flowBuilder.returnNode("exitToIndex").fromOutcome("/index.xhtml");
         return flowBuilder.getFlow();
