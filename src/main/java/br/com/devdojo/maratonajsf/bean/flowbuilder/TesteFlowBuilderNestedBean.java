@@ -17,12 +17,12 @@ public class TesteFlowBuilderNestedBean implements Serializable {
         System.out.println("Fazendo consulta no SPC");
         System.out.println("Pedindo permissão de Deus");
         System.out.println("Sacrificando um bode");
-        if(true){
-            FacesContext context = FacesContext.getCurrentInstance();
-            context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR,"Usuário não passos nas pendencias",
-            "Algum detalhe util"));
-            return null;
-        }
+//        if(true){
+//            FacesContext context = FacesContext.getCurrentInstance();
+//            context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR,"Usuário não passos nas pendencias",
+//            "Algum detalhe util"));
+//            return null;
+//        }
         return "proceedToNewRegistration3";
     }
 
