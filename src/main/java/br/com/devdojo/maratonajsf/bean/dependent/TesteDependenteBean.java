@@ -15,6 +15,9 @@ import static java.util.Arrays.asList;
 public class TesteDependenteBean implements Serializable {
     private List<String> personagens;
     private List<String> personagemSelecionado = new ArrayList<>();
+    private List<String> categoriasList = new ArrayList<>();
+
+
 
     @PostConstruct
     public void init() {
@@ -36,5 +39,13 @@ public class TesteDependenteBean implements Serializable {
 
     public void setPersonagemSelecionado(List<String> personagemSelecionado) {
         this.personagemSelecionado = personagemSelecionado;
+    }
+
+    public List<String> getCategoriasList() {
+        return categoriasList;
+    }
+
+    public void setCategoriasList(List<String> categoriasList) {
+        this.categoriasList = categoriasList;
     }
 }
